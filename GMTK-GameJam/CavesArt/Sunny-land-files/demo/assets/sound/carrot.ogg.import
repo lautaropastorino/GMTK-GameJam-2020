@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/carrot.ogg-3db8ff598e490e30041945082e75e7c9.oggstr"
+
+[deps]
+
+source_file="res://CavesArt/Sunny-land-files/demo/assets/sound/carrot.ogg"
+dest_files=[ "res://.import/carrot.ogg-3db8ff598e490e30041945082e75e7c9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

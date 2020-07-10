@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/star.ogg-b3c2123720984705e6839057e4be09c0.oggstr"
+
+[deps]
+
+source_file="res://CavesArt/Sunny-land-files/demo/assets/sound/star.ogg"
+dest_files=[ "res://.import/star.ogg-b3c2123720984705e6839057e4be09c0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

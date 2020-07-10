@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/enemy-death.ogg-1292c5a08b964bb4afd3dbb9d16abac8.oggstr"
+
+[deps]
+
+source_file="res://CavesArt/Sunny-land-files/demo/assets/sound/enemy-death.ogg"
+dest_files=[ "res://.import/enemy-death.ogg-1292c5a08b964bb4afd3dbb9d16abac8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

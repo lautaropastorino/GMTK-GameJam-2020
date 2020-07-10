@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump.wav-9023a25a80997a10cb01e7f6521b28e4.sample"
+
+[deps]
+
+source_file="res://CavesArt/Sunny-land-files/demo/assets/sound/wavs/jump.wav"
+dest_files=[ "res://.import/jump.wav-9023a25a80997a10cb01e7f6521b28e4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
