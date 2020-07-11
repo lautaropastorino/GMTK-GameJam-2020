@@ -65,7 +65,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 32, 16 )
 
-[node name="PiedraPar" type="Area2D"]
+[node name="PiedraPar" type="Area2D" groups=[
+"obstaculos",
+]]
 collision_layer = 4
 script = ExtResource( 2 )
 

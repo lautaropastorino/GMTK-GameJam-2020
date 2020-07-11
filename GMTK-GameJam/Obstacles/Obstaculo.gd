@@ -8,6 +8,7 @@ var letra = ""
 var seleccionar = ""
 const LETRAS = {"A": 65, "S": 83, "D": 68, "F": 70}
 var rand_pos = RandomNumberGenerator.new()
+var muerto = false
 
 func init(l, ypos):
 	rand_pos.randomize()
@@ -18,9 +19,13 @@ func init(l, ypos):
 	set_position(Vector2(xpos, ypos))
 	
 func _physics_process(delta):
-	if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_right"):
-		if get_position().x < MAX_POS:
-			set_position(Vector2(get_position().x + 10, get_position().y))
-	if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_left"):
-		if get_position().x > MIN_POS:
-			set_position(Vector2(get_position().x - 10, get_position().y))
+	if not muerto:
+		if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_right"):
+			if get_position().x < MAX_POS:
+				set_position(Vector2(get_position().x + 10, get_position().y))
+		if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_left"):
+			if get_position().x > MIN_POS:
+				set_position(Vector2(get_position().x - 10, get_position().y))
+				
+func game_over():
+	muerto = true
