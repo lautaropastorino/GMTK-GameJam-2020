@@ -12,6 +12,7 @@ func _ready():
 	y_max = 450
 	
 func _on_ObstacleSpawn_timeout():
+	randomize()
 	var piedra
 	if rand_range(0, 1) >= 0.5:
 		piedra = piedra_sola.instance()

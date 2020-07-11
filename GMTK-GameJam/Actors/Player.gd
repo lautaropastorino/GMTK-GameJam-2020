@@ -9,25 +9,28 @@ var puntos_lbl
 var y_velo = 0
 onready var animation = $AnimatedSprite
 var facing_right = true
+var game_over = false
 
 func _ready():
 	puntos_lbl = lbl_puntos.instance()
 	add_child(puntos_lbl)
 
 func _physics_process(delta):
-	var colisiones = move_and_collide(Vector2(0, y_velo*delta))
-	
-	if !colisiones:
-		animation.play("fall")
-	else:
-		animation.play("die")
-		emit_signal("death_signal")
-		$PointsTimer.stop()
+	if !game_over:
+		var colisiones = move_and_collide(Vector2(0, y_velo*delta))
 		
-	y_velo += GRAVITY
-	
-	if y_velo > MAX_FALL_SPEED:
-		y_velo = MAX_FALL_SPEED
+		if !colisiones:
+			animation.play("fall")
+		else:
+			animation.play("die")
+			emit_signal("death_signal")
+			$PointsTimer.stop()
+			game_over = true
+			
+		y_velo += GRAVITY
+		
+		if y_velo > MAX_FALL_SPEED:
+			y_velo = MAX_FALL_SPEED
 
 
 func _on_PointsTimer_timeout():
