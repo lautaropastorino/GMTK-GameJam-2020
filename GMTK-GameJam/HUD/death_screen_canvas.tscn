@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="death_screen_canvas" type="CanvasLayer"]
+
+[node name="game_over_label" type="Label" parent="."]
+margin_left = 110.792
+margin_top = 160.181
+margin_right = 180.792
+margin_bottom = 174.181
+rect_scale = Vector2( 12.68, 6.96 )
+text = "Game over"
+__meta__ = {
+"_edit_use_anchors_": false
+}

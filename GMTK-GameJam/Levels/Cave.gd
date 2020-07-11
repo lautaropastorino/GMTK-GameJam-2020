@@ -20,3 +20,7 @@ func _on_ObstacleSpawn_timeout():
 	add_child(piedra)
 	y_min += 200
 	y_max += 200
+
+
+func _on_Player_death_signal():
+	pass # Replace with function body.

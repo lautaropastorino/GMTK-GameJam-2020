@@ -79,4 +79,5 @@ position = Vector2( 392, -144 )
 [node name="ObstacleSpawn" type="Timer" parent="."]
 wait_time = 0.25
 autostart = true
+[connection signal="death_signal" from="Player" to="." method="_on_Player_death_signal"]
 [connection signal="timeout" from="ObstacleSpawn" to="." method="_on_ObstacleSpawn_timeout"]
