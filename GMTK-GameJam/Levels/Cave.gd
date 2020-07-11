@@ -27,3 +27,5 @@ func _on_Player_death_signal():
 	get_tree().call_group("obstaculos","game_over")
 	var d_screen = death_screen.instance()
 	add_child(d_screen)
+
+
