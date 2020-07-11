@@ -77,6 +77,5 @@ tile_data = PoolIntArray( 327669, 1, 2, 327670, 1, 2, 327671, 1, 2, 327672, 1, 2
 position = Vector2( 392, -144 )
 
 [node name="ObstacleSpawn" type="Timer" parent="."]
-wait_time = 0.25
 autostart = true
 [connection signal="timeout" from="ObstacleSpawn" to="." method="_on_ObstacleSpawn_timeout"]

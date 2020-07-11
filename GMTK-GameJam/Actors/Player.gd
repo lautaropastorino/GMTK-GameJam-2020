@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = 30
 const MAX_FALL_SPEED = 300
- 
+
 var y_velo = 0
 onready var animation = $AnimatedSprite
 var facing_right = true
@@ -22,3 +22,5 @@ func _physics_process(delta):
 	if y_velo > MAX_FALL_SPEED:
 		y_velo = MAX_FALL_SPEED
 		
+
+	
