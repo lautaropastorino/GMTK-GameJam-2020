@@ -83,7 +83,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 19.156, 38.9346 )
+extents = Vector2( 16.6102, 38.9346 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
@@ -103,3 +103,22 @@ position = Vector2( -3.36737, 145.217 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
 smoothing_enabled = true
+
+[node name="PointsLabel" type="Label" parent="Camera2D"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 179.367
+margin_top = -249.217
+margin_right = 219.367
+margin_bottom = -235.217
+text = "Score: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointsTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="death_signal" from="." to="." method="_on_Player_death_signal"]
+[connection signal="timeout" from="PointsTimer" to="." method="_on_PointsTimer_timeout"]

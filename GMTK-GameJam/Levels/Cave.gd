@@ -3,7 +3,7 @@ extends Node2D
 onready var piedra_sola = preload("res://Obstacles/PiedraSola.tscn")
 onready var piedra_par = preload("res://Obstacles/PiedraPar.tscn")
 onready var death_screen = preload("res://HUD/death_screen_canvas.tscn")
-var letras = ["A", "S", "D", "F"]
+var letras = ["F", "A", "S", "D"]
 var y_min
 var y_max
 
