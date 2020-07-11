@@ -10,6 +10,7 @@ const LETRAS = {"A": 65, "S": 83, "D": 68, "F": 70, "W": 87}
 var rand_pos = RandomNumberGenerator.new()
 var muerto = false
 var on_screen = false
+var apretando_todas = false
 
 func init(l, ypos):
 	rand_pos.randomize()
@@ -21,12 +22,18 @@ func init(l, ypos):
 	
 func _physics_process(delta):
 	if not muerto and on_screen:
-		if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_right"):
-			if get_position().x < MAX_POS:
-				set_position(Vector2(get_position().x + 10, get_position().y))
-		if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_left"):
-			if get_position().x > MIN_POS:
-				set_position(Vector2(get_position().x - 10, get_position().y))
+		apretando_todas = false
+		for l in LETRAS:
+			if l != letra and Input.is_key_pressed(LETRAS[l]):
+				apretando_todas = true
+				break
+		if not apretando_todas:
+			if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_right"):
+				if get_position().x < MAX_POS:
+					set_position(Vector2(get_position().x + 10, get_position().y))
+			if Input.is_key_pressed(seleccionar) and Input.is_action_pressed("move_left"):
+				if get_position().x > MIN_POS:
+					set_position(Vector2(get_position().x - 10, get_position().y))
 				
 func game_over():
 	muerto = true
