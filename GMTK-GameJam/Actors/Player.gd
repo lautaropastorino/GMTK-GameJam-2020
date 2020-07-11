@@ -21,7 +21,7 @@ func _physics_process(delta):
 		
 		if !colisiones:
 			animation.play("fall")
-		else:
+		elif colisiones.collider in get_tree().get_nodes_in_group("obstaculos"):
 			animation.play("die")
 			emit_signal("death_signal")
 			$PointsTimer.stop()
