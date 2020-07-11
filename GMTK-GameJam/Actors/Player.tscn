@@ -92,8 +92,12 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.5, 12.5 )
 frames = SubResource( 14 )
+<<<<<<< HEAD
 animation = "fall"
 frame = 1
+=======
+animation = "die"
+>>>>>>> eea3fe44e6acdba07125967dc45f6aa5d9f789e9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -8.61023, 17.2802 )
