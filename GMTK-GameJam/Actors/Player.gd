@@ -4,10 +4,15 @@ const GRAVITY = 30
 const MAX_FALL_SPEED = 300
 signal death_signal
 var points = 0
-
+onready var lbl_puntos = preload("res://HUD/CanvasPuntos.tscn")
+var puntos_lbl
 var y_velo = 0
 onready var animation = $AnimatedSprite
 var facing_right = true
+
+func _ready():
+	puntos_lbl = lbl_puntos.instance()
+	add_child(puntos_lbl)
 
 func _physics_process(delta):
 	var colisiones = move_and_collide(Vector2(0, y_velo*delta))
@@ -27,6 +32,6 @@ func _physics_process(delta):
 
 func _on_PointsTimer_timeout():
 	points += 5
-	$Camera2D/PointsLabel.set_text("Score: " + str(points))
+	puntos_lbl.get_node("PointsLabel").set_text("Score: " + str(points))
 
 

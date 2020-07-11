@@ -104,20 +104,6 @@ current = true
 zoom = Vector2( 0.75, 0.75 )
 smoothing_enabled = true
 
-[node name="PointsLabel" type="Label" parent="Camera2D"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = 179.367
-margin_top = -249.217
-margin_right = 219.367
-margin_bottom = -235.217
-text = "Score: 0"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="PointsTimer" type="Timer" parent="."]
 autostart = true
 [connection signal="death_signal" from="." to="." method="_on_Player_death_signal"]
